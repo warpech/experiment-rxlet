@@ -3,7 +3,7 @@
     <ul>
         <ng-container *cdkVirtualFor="let item of items">
         <li>
-            <div>{{item.name}}</div>
+            <div>{{item.name}} <span class="amount">{{item.amount$ | async}}</span></div>
         </li>
         </ng-container>
     </ul>

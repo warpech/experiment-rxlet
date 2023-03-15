@@ -20,3 +20,7 @@ li {
     display: flex;
     align-items: center;
 }
+
+.amount {
+    color: #ccc;
+}
