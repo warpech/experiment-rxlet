@@ -21,6 +21,16 @@ li {
     align-items: center;
 }
 
+.item {
+    display: flex;
+    width: 100%;
+}
+
+.name {
+    flex: 1;
+}
+
 .amount {
     color: #ccc;
+    flex: 1;
 }
