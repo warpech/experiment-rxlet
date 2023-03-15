@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-list-naive',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./list-naive.component.css']
 })
 export class ListNaiveComponent {
-
+  @Input() items: string[] = [];
 }
