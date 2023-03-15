@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Customer } from '../customer.service';
 
 @Component({
   selector: 'app-list-naive',
@@ -6,5 +7,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./list-naive.component.css']
 })
 export class ListNaiveComponent {
-  @Input() items: string[] = [];
+  @Input() items: Customer[] = [];
 }

@@ -1,6 +1,10 @@
 import { Injectable } from '@angular/core';
 import { faker } from '@faker-js/faker';
 
+export interface Customer {
+  name: string;
+}
+
 function generateRandomNames(): string[] {
   const names: string[] = [];
   for (let i = 0; i < 1000; i++) {
@@ -13,13 +17,13 @@ function generateRandomNames(): string[] {
 @Injectable({
   providedIn: 'root'
 })
-export class NameService {
+export class CustomerService {
 
-  private readonly names = generateRandomNames();
+  private readonly customers = generateRandomNames().map(x => { return { name: x } });
 
   constructor() { }
 
-  getNames() {
-    return this.names;
+  getCustomers() {
+    return this.customers;
   }
 }

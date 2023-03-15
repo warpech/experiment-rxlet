@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Customer } from '../customer.service';
 
 @Component({
   selector: 'app-list-virtual-scroll',
@@ -6,5 +7,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./list-virtual-scroll.component.css']
 })
 export class ListVirtualScrollComponent {
-  @Input() items: string[] = [];
+  @Input() items: Customer[] = [];
 }

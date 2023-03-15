@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NameService } from './name.service';
+import { CustomerService } from './customer.service';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +8,9 @@ import { NameService } from './name.service';
 })
 export class AppComponent {
   title = 'my-app';
-  protected readonly names = this.nameService.getNames();
+  protected readonly customers = this.CustomerService.getCustomers();
 
-  constructor(private nameService: NameService) {
+  constructor(private CustomerService: CustomerService) {
     
   }
 }
