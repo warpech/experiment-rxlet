@@ -4,7 +4,9 @@ import { interval, map, Observable, of, shareReplay, startWith } from 'rxjs';
 
 export interface Customer {
   name: string;
-  amount$: Observable<number>;
+  credit: {
+    amount$: Observable<number>;
+  }  
 }
 
 // Create an observable that emits a new number every 5 seconds
@@ -33,7 +35,7 @@ function generateRandomNames(): string[] {
 })
 export class CustomerService {
 
-  private readonly customers = generateRandomNames().map(x => { return { name: x, amount$: amountFactory() } });
+  private readonly customers = generateRandomNames().map(x => { return { name: x, credit: { amount$: amountFactory() } } });
 
   constructor() { }
 

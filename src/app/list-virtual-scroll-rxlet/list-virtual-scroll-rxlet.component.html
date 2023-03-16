@@ -5,7 +5,7 @@
             <li>
                 <div class="item">
                     <div class="name">{{item.name}}</div>
-                    <div class="amount" *rxLet="item.amount$ as amount">{{amount}}</div>
+                    <div class="amount" *rxLet="item.credit.amount$ as amount">{{amount}}</div>
                 </div>
             </li>
         </ng-container>
