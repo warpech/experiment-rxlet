@@ -21,7 +21,7 @@ const amountFactory = () => {
 
 function generateRandomNames(): string[] {
   const names: string[] = [];
-  for (let i = 0; i < 1000; i++) {
+  for (let i = 0; i < 150; i++) {
     const name = `${faker.name.firstName()} ${faker.name.lastName()}`;
     names.push(name);
   }
