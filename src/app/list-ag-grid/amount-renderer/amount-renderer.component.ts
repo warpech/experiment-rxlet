@@ -10,6 +10,7 @@ import { of } from 'rxjs';
 })
 export class AmountRendererComponent implements OnInit, ICellRendererAngularComp {
   value = { amount$: of(0) };
+  useRxLet = false;
 
   constructor() { }
 
@@ -19,9 +20,11 @@ export class AmountRendererComponent implements OnInit, ICellRendererAngularComp
   agInit(params: ICellRendererParams): void {
     console.log('params', params.value);
     this.value = params.value;
+    this.useRxLet = params.context.useRxLet;
   }
 
   refresh(params: ICellRendererParams) {
+    console.log('params2', params.value);
     return false;
   }
 

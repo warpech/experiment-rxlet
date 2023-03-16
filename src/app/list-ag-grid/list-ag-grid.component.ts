@@ -29,11 +29,18 @@ public defaultColDef: ColDef = {
 };
 
 public rowHeight = 20;
+public context = {
+  useRxLet: true
+};
 
 // For accessing the Grid's API
 @ViewChild(AgGridAngular) agGrid!: AgGridAngular;
 
 constructor() {}
+
+useRxLetChanged() {
+  this.agGrid.api.refreshCells({ force: true });
+}
 
 // Example of consuming Grid Event
 onCellClicked( e: CellClickedEvent): void {

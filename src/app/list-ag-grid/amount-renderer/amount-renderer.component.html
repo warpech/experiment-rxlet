@@ -1,1 +1,7 @@
-<div class="amount">{{value.amount$ | async}}</div>
+
+<ng-container *ngIf="useRxLet">
+  <div class="amount" *rxLet="value.amount$ as amount">{{amount}}r</div>
+  </ng-container>
+  <ng-container *ngIf="!useRxLet">
+    <div class="amount">{{value.amount$ | async}}s</div>
+    </ng-container>
