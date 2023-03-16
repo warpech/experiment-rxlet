@@ -11,6 +11,7 @@ export class AppComponent {
   protected showList1 = true;
   protected showList2 = true;
   protected showList3 = true;
+  protected showList4 = true;
   protected readonly customers = this.CustomerService.getCustomers();
 
   constructor(private CustomerService: CustomerService) {
