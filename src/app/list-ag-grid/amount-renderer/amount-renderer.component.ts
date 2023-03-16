@@ -18,13 +18,11 @@ export class AmountRendererComponent implements OnInit, ICellRendererAngularComp
   }
 
   agInit(params: ICellRendererParams): void {
-    console.log('params', params.value);
     this.value = params.value;
     this.useRxLet = params.context.useRxLet;
   }
 
   refresh(params: ICellRendererParams) {
-    console.log('params2', params.value);
     return false;
   }
 

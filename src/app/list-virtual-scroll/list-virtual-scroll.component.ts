@@ -9,4 +9,5 @@ import { Customer } from '../customer.service';
 })
 export class ListVirtualScrollComponent {
   @Input() items: Customer[] = [];
+  @Input() useRxLet = false;
 }

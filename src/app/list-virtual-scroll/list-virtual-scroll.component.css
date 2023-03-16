@@ -27,11 +27,6 @@ li {
     width: 100%;
 }
 
-.name {
-    flex: 1;
-}
-
-.amount {
-    color: #ccc;
+.item > * {
     flex: 1;
 }

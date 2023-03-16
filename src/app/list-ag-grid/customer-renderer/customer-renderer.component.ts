@@ -16,7 +16,6 @@ export class CustomerRendererComponent implements OnInit, ICellRendererAngularCo
   }
 
   agInit(params: ICellRendererParams): void {
-    console.log('params', params.value);
     this.value = params.value;
   }
 

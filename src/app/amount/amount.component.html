@@ -1,0 +1,6 @@
+<ng-container *ngIf="useRxLet">
+  <div class="amount" *rxLet="value.amount$ as amount">{{amount}}rx</div>
+</ng-container>
+<ng-container *ngIf="!useRxLet">
+  <div class="amount">{{value.amount$ | async}}</div>
+</ng-container>

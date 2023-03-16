@@ -1,21 +1,19 @@
 <h1>Comparison of ways to do a list</h1>
 <div>
-  <label><input type="checkbox" [(ngModel)]="showList1"> app-list-naive</label>
-  <label><input type="checkbox" [(ngModel)]="showList2"> app-list-virtual-scroll</label>
-  <label><input type="checkbox" [(ngModel)]="showList3"> app-list-virtual-scroll-rxlet</label>
-  <label><input type="checkbox" [(ngModel)]="showList4"> app-list-ag-grid</label>
+  <label><input type="checkbox" [(ngModel)]="showList1"> list-naive</label>
+  <label><input type="checkbox" [(ngModel)]="showList2"> list-virtual-scroll</label>
+  <label><input type="checkbox" [(ngModel)]="showList3"> list-ag-grid</label>
+  <span class="separator"></span>
+  <label><input type="checkbox" [(ngModel)]="useRxLet"> use rxLet</label>
 </div>
 <main>
   <ng-container *ngIf="showList1">
-    <app-list-naive [items]="customers"></app-list-naive>
+    <app-list-naive [items]="customers" [useRxLet]="useRxLet"></app-list-naive>
   </ng-container>
   <ng-container *ngIf="showList2">
-    <app-list-virtual-scroll [items]="customers"></app-list-virtual-scroll>
+    <app-list-virtual-scroll [items]="customers" [useRxLet]="useRxLet"></app-list-virtual-scroll>
   </ng-container>
   <ng-container *ngIf="showList3">
-    <app-list-virtual-scroll-rxlet [items]="customers"></app-list-virtual-scroll-rxlet>
-  </ng-container>
-  <ng-container *ngIf="showList4">
-    <app-list-ag-grid [items]="customers"></app-list-ag-grid>
+    <app-list-ag-grid [items]="customers" [useRxLet]="useRxLet"></app-list-ag-grid>
   </ng-container>
 </main>

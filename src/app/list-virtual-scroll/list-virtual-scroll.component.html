@@ -5,7 +5,7 @@
             <li>
                 <div class="item">
                     <div class="name">{{item.name}}</div>
-                    <div class="amount">{{item.credit.amount$ | async}}</div>
+                    <app-amount [value]="item.credit" [useRxLet]="useRxLet"></app-amount>
                 </div>
             </li>
         </ng-container>

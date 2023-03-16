@@ -7,3 +7,8 @@ main {
 main > * {
     flex: 1;
 }
+
+.separator {
+    width: 40px;
+    display: inline-block;
+}

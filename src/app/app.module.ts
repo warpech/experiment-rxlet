@@ -9,20 +9,20 @@ import { AgGridModule } from 'ag-grid-angular';
 import { AppComponent } from './app.component';
 import { ListNaiveComponent } from './list-naive/list-naive.component';
 import { ListVirtualScrollComponent } from './list-virtual-scroll/list-virtual-scroll.component';
-import { ListVirtualScrollRxLetComponent } from './list-virtual-scroll-rxlet/list-virtual-scroll-rxlet.component';
 import { ListAgGridComponent } from './list-ag-grid/list-ag-grid.component';
 import { CustomerRendererComponent } from './list-ag-grid/customer-renderer/customer-renderer.component';
 import { AmountRendererComponent } from './list-ag-grid/amount-renderer/amount-renderer.component';
+import { AmountComponent } from './amount/amount.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListNaiveComponent,
     ListVirtualScrollComponent,
-    ListVirtualScrollRxLetComponent,
     ListAgGridComponent,
     CustomerRendererComponent,
-    AmountRendererComponent
+    AmountRendererComponent,
+    AmountComponent
   ],
   imports: [
     BrowserModule,

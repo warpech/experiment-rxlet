@@ -9,4 +9,5 @@ import { Customer } from '../customer.service';
 })
 export class ListNaiveComponent {
   @Input() items: Customer[] = [];
+  @Input() useRxLet = false;
 }

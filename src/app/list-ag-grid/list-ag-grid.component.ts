@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnChanges, SimpleChanges, ViewChild } from '@angular/core';
 import { Customer } from '../customer.service';
 import { AgGridAngular } from 'ag-grid-angular';
 import { CellClickedEvent, ColDef } from 'ag-grid-community';
@@ -11,8 +11,9 @@ import { AmountRendererComponent } from './amount-renderer/amount-renderer.compo
   styleUrls: ['./list-ag-grid.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ListAgGridComponent {
+export class ListAgGridComponent implements OnChanges {
   @Input() items: Customer[] = [];
+  @Input() useRxLet = false;
 
   // Each Column Definition results in one Column.
  public columnDefs: ColDef[] = [
@@ -38,8 +39,9 @@ public context = {
 
 constructor() {}
 
-useRxLetChanged() {
-  this.agGrid.api.refreshCells({ force: true });
+ngOnChanges(): void {
+  this.context.useRxLet = this.useRxLet;
+  this.agGrid?.api.refreshCells({ force: true });
 }
 
 // Example of consuming Grid Event
