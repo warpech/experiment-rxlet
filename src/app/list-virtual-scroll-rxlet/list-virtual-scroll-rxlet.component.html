@@ -1,4 +1,4 @@
-<h2>list-virtual-scroll-rxlet</h2>
+<h2>list-virtual-scroll-rxLet</h2>
 <cdk-virtual-scroll-viewport itemSize="40">
     <ul>
         <ng-container *cdkVirtualFor="let item of items">
@@ -11,5 +11,4 @@
         </ng-container>
     </ul>
 </cdk-virtual-scroll-viewport>
-<p>This component renders 1000 items like there is no tomorrow. It has the best runtime performance, but is a memory
-    hog, and it blocks initial rendering.</p>
+<p>This component renders items using CDK virtual scrolling and an <b>rxLet</b> pipe.</p>
