@@ -7,7 +7,10 @@ import { CustomerService } from './customer.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-app';
+  protected readonly title = 'my-app';
+  protected showList1 = true;
+  protected showList2 = true;
+  protected showList3 = true;
   protected readonly customers = this.CustomerService.getCustomers();
 
   constructor(private CustomerService: CustomerService) {
